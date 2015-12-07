@@ -39,7 +39,7 @@ class TweetTableViewCell: UITableViewCell {
             
             if let profileImageURL = tweet.user.profileImageURL {
                 if let imageData = NSData(contentsOfURL: profileImageURL) { // blocks main thread!
-                    tweetProfileImageView?.image = UIImage(data: imageData)
+                    tweetProfileImageView.image = UIImage(data: imageData)
                 }
             }
         }
