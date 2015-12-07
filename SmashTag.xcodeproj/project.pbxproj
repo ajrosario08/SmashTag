@@ -105,8 +105,8 @@
 		92BC85FE1BF82DAF00469FE9 /* SmashTag */ = {
 			isa = PBXGroup;
 			children = (
-				92D806411BF932D0004366B8 /* TweetTableViewController.swift */,
 				92BC85FF1BF82DAF00469FE9 /* AppDelegate.swift */,
+				92D806411BF932D0004366B8 /* TweetTableViewController.swift */,
 				92BC86031BF82DAF00469FE9 /* Main.storyboard */,
 				92CB55FC1C153C40006D0E7F /* Twitter */,
 				92BC86061BF82DAF00469FE9 /* Assets.xcassets */,
