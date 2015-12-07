@@ -80,6 +80,13 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="RSP-fA-Grs"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="U2Y-BL-Wgl">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <connections>
+                            <action selector="refresh:" destination="Gef-Rp-Fq4" eventType="valueChanged" id="LbP-Je-t4R"/>
+                        </connections>
+                    </refreshControl>
                     <connections>
                         <outlet property="searchTextField" destination="wgJ-fU-yYW" id="flf-LR-cwy"/>
                     </connections>
