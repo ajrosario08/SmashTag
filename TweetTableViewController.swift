@@ -10,7 +10,7 @@ import UIKit
 
 class TweetTableViewController: UITableViewController {
 
-    var tweets = [[Tweet]]
+    var tweets = [[Tweet]]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
