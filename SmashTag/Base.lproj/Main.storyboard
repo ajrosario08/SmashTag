@@ -3,13 +3,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Tweet Table View Controller-->
         <scene sceneID="H1a-Gm-7Rx">
             <objects>
                 <tableViewController id="Gef-Rp-Fq4" customClass="TweetTableViewController" customModule="SmashTag" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="2wn-w6-A5u">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="198" sectionHeaderHeight="28" sectionFooterHeight="28" id="2wn-w6-A5u">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
@@ -22,33 +23,55 @@
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Tweet" textLabel="97l-nr-1Bh" detailTextLabel="nqk-qE-4zm" style="IBUITableViewCellStyleSubtitle" id="YaQ-Ko-cke">
-                                <rect key="frame" x="0.0" y="122" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Tweet" rowHeight="198" id="YaQ-Ko-cke" customClass="TweetTableViewCell" customModule="SmashTag" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="122" width="600" height="198"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YaQ-Ko-cke" id="ABw-YS-xau">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="197.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="97l-nr-1Bh">
-                                            <rect key="frame" x="15" y="6" width="31.5" height="19.5"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fMe-DH-ydE">
+                                            <rect key="frame" x="64" y="8" width="528" height="19.5"/>
                                             <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nqk-qE-4zm">
-                                            <rect key="frame" x="15" y="25.5" width="40.5" height="13.5"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aTd-yp-VQG">
+                                            <rect key="frame" x="8" y="8" width="48" height="48"/>
                                             <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="48" id="O9f-wB-GdV"/>
+                                                <constraint firstAttribute="width" constant="48" id="lzV-KD-TyT"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4q2-Js-k8r">
+                                            <rect key="frame" x="64" y="35" width="528" height="154"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <animations/>
+                                    <constraints>
+                                        <constraint firstAttribute="topMargin" secondItem="fMe-DH-ydE" secondAttribute="top" id="E04-cZ-mRW"/>
+                                        <constraint firstAttribute="leadingMargin" secondItem="aTd-yp-VQG" secondAttribute="leading" id="Y0Q-ir-2Bk"/>
+                                        <constraint firstAttribute="topMargin" secondItem="aTd-yp-VQG" secondAttribute="top" id="a0q-ga-hMb"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="4q2-Js-k8r" secondAttribute="bottom" id="d2I-gu-oXW"/>
+                                        <constraint firstItem="4q2-Js-k8r" firstAttribute="top" secondItem="fMe-DH-ydE" secondAttribute="bottom" constant="8" id="hQk-Oh-0YQ"/>
+                                        <constraint firstItem="4q2-Js-k8r" firstAttribute="leading" secondItem="fMe-DH-ydE" secondAttribute="leading" id="ll9-4p-VJe"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="4q2-Js-k8r" secondAttribute="trailing" id="ruP-3B-xr4"/>
+                                        <constraint firstItem="fMe-DH-ydE" firstAttribute="leading" secondItem="aTd-yp-VQG" secondAttribute="trailing" constant="8" id="wyt-2b-Crz"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="fMe-DH-ydE" secondAttribute="trailing" id="x3U-jM-BTO"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
+                                <connections>
+                                    <outlet property="tweetProfileImageView" destination="aTd-yp-VQG" id="T5h-x1-ew9"/>
+                                    <outlet property="tweetScreenNameLabel" destination="fMe-DH-ydE" id="bVH-bw-TEe"/>
+                                    <outlet property="tweetTextLabel" destination="4q2-Js-k8r" id="oq5-ee-79A"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -63,7 +86,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OyS-1q-lhU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1247" y="437"/>
+            <point key="canvasLocation" x="1455" y="314"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OHB-6w-J75">
